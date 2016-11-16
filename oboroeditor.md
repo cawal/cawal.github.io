@@ -10,3 +10,7 @@ OBO-RO Editor
 
 OBO2UML transformation tool
 ---------------------------
+
+
+Contributing
+------------

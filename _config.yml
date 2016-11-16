@@ -7,9 +7,9 @@
 
 # Site settings
 title: Ricardo Cacheta Waldemarin
-email: your-email@domain.com
+email: ""
 description: > # this means to ignore newlines until "baseurl:"
-  PhD. candidate, MDD adept, Eclipse user, Git lover.
+  PhD. candidate at LSSB-FFCLRP-USP, MDD adept, Eclipse user, Git lover.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://cawal.github.io" # the base hostname & protocol for your site
 twitter_username: cawal
