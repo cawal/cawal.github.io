@@ -68,13 +68,12 @@
   <div class="post-content">
     <h2 id="obo-ro-editor">OBO-RO Editor</h2>
 
-<p>OBO-RO Editor is a Eclipse-based plugin/standalone editor that supports the creation of biomedical ontologies using the elements provided by a UML profile for the OBO Relation Ontology (<code>obo_rel</code>). This editor provides support for importing an OBO ontology represented using the OBO Flat File Format (OBOFFF) and for exporting a developed ontology as an OBOFFF ontology or as a shareable UML model.</p>
+<p>OBO-RO Editor is a Eclipse-based plugin/standalone editor that supports the creation of biomedical ontologies using the elements provided by a UML profile for the OBO Relation Ontology (<code class="highlighter-rouge">obo_rel</code>). This editor provides support for importing an OBO ontology represented using the OBO Flat File Format (OBOFFF) and for exporting a developed ontology as an OBOFFF ontology or as a shareable UML model.</p>
 
 <p>We proposed a model-driven approach to support the development of a biomedical ontology using a UML profile for the OBO-RO and the integration between OBOFFF ontologies and UML models. According to this approach, different Ecore-based metamodels were created to represent an OBOFFF ontology and an OBO-RO profile-based biomedical ontology. Further, an existing Ecore-based metamodel was reused to represent a biomedical ontology as a UML shareable model. Different sets of ATL transformation modules were created to support the model transformation between these metamodels. A graphical UML editor named OBO-RO Editor was implemented to support the creation of biomedical ontologies using the OBO-RO profile metamodel, as well as to support the integration between the different metamodels. Finally, a command-line tool named OBO2UML was implemented to automatically obtain a UML shareable model from an OBOFFF ontology.</p>
 
 <h3 id="installing-obo-ro-editor-as-an-eclipse-plugin">Installing OBO-RO Editor as an Eclipse plugin</h3>
-
-<p>In your Eclipse Editor, &quot;Window &gt; Install new software...&quot;, add the the OBO-RO Editor Update Site at <a href="http://labs.cawal.com.br/update-sites/obo-ro-editor/">http://labs.cawal.com.br/update-sites/obo-ro-editor/</a> and install the OBO-RO Editor feature.</p>
+<p>In your Eclipse Editor, “Window &gt; Install new software…”, add the the OBO-RO Editor Update Site at http://labs.cawal.com.br/update-sites/obo-ro-editor/ and install the OBO-RO Editor feature.</p>
 
 <h3 id="installing-obo-ro-editor-as-a-standalone-application">Installing OBO-RO Editor as a Standalone Application</h3>
 
@@ -88,22 +87,25 @@ OBO2UML allows one to quickly reuse the existing knowledge formalized in any OBO
 <p><a href="https://bitbucket.org/LSSB-FFCLRP/obo2uml/downloads/obo2uml.jar">Download the OBO2UML Executable JAR file</a></p>
 
 <h3 id="obo2uml-usage">OBO2UML Usage</h3>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># More than one OBO file can be used as input for the transformation</span>
-<span class="c"># The basic usage of OBO2UML is...</span>
-<span class="gp">$ </span>java -jar obo2uml.jar -i input1.obo <span class="o">[</span>input2.obo ...] -o output.uml
 
-<span class="c"># Example: Transforms the bone.obo ontology into a UML2 model</span>
-<span class="gp">$ </span>java -jar obo2uml.jar -i bone.obo -o bone.uml
+<p>```bash
+# More than one OBO file can be used as input for the transformation
+# The basic usage of OBO2UML is…
+$ java -jar obo2uml.jar -i input1.obo [input2.obo …] -o output.uml</p>
 
-<span class="c"># or you can use the long version...</span>
-<span class="gp">$ </span>java -jar obo2uml.jar --input-files bone.obo --output-file bone.uml
+<h1 id="example-transforms-the-boneobo-ontology-into-a-uml2-model">Example: Transforms the bone.obo ontology into a UML2 model</h1>
+<p>$ java -jar obo2uml.jar -i bone.obo -o bone.uml</p>
 
-<span class="c"># You can also maintain the intermediary models files</span>
-<span class="gp">$ </span>java -jar obo2uml.jar --keep-files --input-files bone.obo --output-file bone.uml
-</code></pre></div>
+<h1 id="or-you-can-use-the-long-version">or you can use the long version…</h1>
+<p>$ java -jar obo2uml.jar –input-files bone.obo –output-file bone.uml</p>
+
+<h1 id="you-can-also-maintain-the-intermediary-models-files">You can also maintain the intermediary models files</h1>
+<p>$ java -jar obo2uml.jar –keep-files –input-files bone.obo –output-file bone.uml
+```</p>
+
 <h2 id="shareable-uml-model-compatibility">Shareable UML Model Compatibility</h2>
 
-<p>We represent ontologies as shareable UML models using the <a href="http://www.eclipse.org/modeling/mdt/">Eclipse&#39;s Model Development Tools</a> <a href="http://wiki.eclipse.org/MDT-UML2">UML2 metamodel</a>. The compatibility of the obtained models with different UML-compliant tools can be verified in the MDT Wiki at <a href="https://wiki.eclipse.org/MDT-UML2-Tool-Compatibility">MDT-UML2-Tool-Compatibility</a>.</p>
+<p>We represent ontologies as shareable UML models using the <a href="http://www.eclipse.org/modeling/mdt/">Eclipse’s Model Development Tools</a> <a href="http://wiki.eclipse.org/MDT-UML2">UML2 metamodel</a>. The compatibility of the obtained models with different UML-compliant tools can be verified in the MDT Wiki at <a href="https://wiki.eclipse.org/MDT-UML2-Tool-Compatibility">MDT-UML2-Tool-Compatibility</a>.</p>
 
 <h2 id="contributing">Contributing</h2>
 

@@ -14,8 +14,8 @@ We proposed a model-driven approach to support the development of a biomedical o
 
 
 ### Installing OBO-RO Editor as an Eclipse plugin
-
 In your Eclipse Editor, "Window > Install new software...", add the the OBO-RO Editor Update Site at http://labs.cawal.com.br/update-sites/obo-ro-editor/ and install the OBO-RO Editor feature.
+
 
 ### Installing OBO-RO Editor as a Standalone Application
 
