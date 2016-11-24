@@ -9,7 +9,8 @@ OBO-RO Editor
 
 OBO-RO Editor is a Eclipse-based plugin/standalone editor that supports the creation of biomedical ontologies using the elements provided by a UML profile for the OBO Relation Ontology (`obo_rel`). This editor provides support for importing an OBO ontology represented using the OBO Flat File Format (OBOFFF) and for exporting a developed ontology as an OBOFFF ontology or as a shareable UML model.
 
-We proposed a model-driven approach to support the development of a biomedical ontology using a UML profile for the OBO-RO and the integration between OBOFFF ontologies and UML models. According to this approach, different Ecore-based metamodels were created to represent an OBOFFF ontology and an OBO-RO profile-based biomedical ontology. Further, an existing Ecore-based metamodel was reused to represent a biomedical ontology as a UML shareable model. Different sets of ATL transformation modules were created to support the model transformation between these metamodels. A graphical UML editor named OBO-RO Editor was implemented to support the creation of biomedical ontologies using the OBO-RO profile metamodel, as well as to support the integration between the different metamodels. Finally, a command-line tool named OBO2UML was implemented to automatically obtain a UML shareable model from an OBOFFF ontology.
+We proposed a model-driven approach to support the development of a biomedical ontology using a UML profile for the OBO-RO and the integration between OBOFFF ontologies and UML models. According to this approach, different Ecore-based metamodels were created to represent an OBOFFF ontology and an OBO-RO profile-based biomedical ontology. Further, an existing Ecore-based metamodel was reused to represent a biomedical ontology as a UML shareable model. Different sets of ATL transformation modules were created to support the model transformation between these metamodels.
+
 
 
 
