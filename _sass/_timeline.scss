@@ -2,10 +2,8 @@
  * Timeline based on
  * https://gist.github.com/CodeMyUI/d5a6a6d98251de21b934c7c577cce147
 */
-
-.timeline {
+.timeline-md {
     background-color: $timeline-background-color;
-    min-height: 100vh;
     margin: 0;
     font-family: $timeline-font-family;
     position: relative;
@@ -20,13 +18,15 @@
         width: 4px;
         background-color: $timeline-rule-color;
     }
-    .entries {
+    tbody {
         width: calc(100% - 80px);
+        width: 800px;
         max-width: 800px;
         margin: auto;
         position: relative;
         left: -5px;
-        .entry {
+        display: table-cell;
+        tr {
             width: calc(50% - 80px);
             float: left;
             padding: 20px;
@@ -35,11 +35,12 @@
             &:not(:first-child) {
                 margin-top: -60px;
             }
-            .title {
+            td:first-child {
                 font-size: 32px;
                 margin-bottom: 12px;
                 position: relative;
                 color: $timeline-entry-title-color;
+                display:block;
                 &:before {
                     content: '';
                     position: absolute;
@@ -57,10 +58,12 @@
                     width: 24px;
                     height: 24px;
                     transform: translate(8px, -50%);
+                    background-color: $timeline-big-event-background-color;
                 }
             }
-            .body {
+            td {
                 color: $timeline-entry-body-color;
+                display:block;
                 p {
                     line-height: 1.4em;
                 }
@@ -68,7 +71,7 @@
             &:nth-child(2n) {
                 text-align: left;
                 float: right;
-                .title {
+                td:first-child {
                     &:before {
                         left: -63px;
                     }
