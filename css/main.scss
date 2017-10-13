@@ -22,6 +22,19 @@ $grey-color-dark: darken($grey-color, 25%);
 $content-width: 800px;
 $on-palm: 600px;
 $on-laptop: 800px;
+
+// TIMELINE:
+$timeline-background-color: $background-color;
+$timeline-rule-color: $grey-color;
+$timeline-font-family: $base-font-family;
+
+$timeline-event-background-color: $timeline-background-color;
+$timeline-event-border-color: $grey-color-dark;
+$timeline-big-event-background-color: $timeline-event-background-color;
+
+$timeline-entry-title-color: $grey-color-dark;
+$timeline-entry-body-color: $grey-color;
+
 // Use media queries like this:
 // @include media-query($on-palm) {
 //     .wrapper {
