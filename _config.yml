@@ -9,8 +9,10 @@
 title: CaWaL
 email: ""
 description: > # this means to ignore newlines until "baseurl:"
-  PhD. candidate at LSSB-FFCLRP-USP,
-  Java & PHP programmer, MDD adept, RESTful services developer.
+  Software developer and PhD. candidate.
+  Adept of DDD, TDD, and MDD.
+  Web services/back end developer.
+  
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://cawal.github.io" # the base hostname & protocol for your site
 twitter_username: cawal
@@ -22,9 +24,6 @@ markdown: kramdown
 kramdown:
   input: GFM
   auto_ids: true
-#markdown: redcarpet
-#redcarpet:
-#    extensions: ["no_intra_emphasis", "tables", "autolink", "strikethrough", "with_toc_data"]
 
 sass:
     sass_dir: _sass
