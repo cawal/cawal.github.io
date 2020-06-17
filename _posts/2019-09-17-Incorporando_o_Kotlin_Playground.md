@@ -5,8 +5,8 @@ date:   2019-09-17 12:00:00 -0300
 categories: kotlin
 ---
 
-Tenho usado muito Kotlin em meus projetos Java e vi que é possível adicionar um mini-editor como o presente no Kotlin Playground em uma página pessoal, permitindo a inclusão de código editável e que pode ser executado remotamente pelo Kotlin Playground. 
-Esse post é um teste para essa inclusão aqui no blog:
+Tenho usado muito Kotlin em meus projetos Java: é uma linguagem muito agradável de utilizar, com boas abstrações e que interopera eficientemente com todo o conjunto de bibliotecas já existentes para Java. Passando pelo Kotlin Playground, vi que é possível adicionar um mini-bloco de código Kotlin uma página pessoal de maneira editável e executável (ótimo para representar pequenos exemplos).
+Esse post é um teste para a adição que fiz dessa funcionalidade aqui no blog:
 
 ```kotlin
 fun main() { 
