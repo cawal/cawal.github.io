@@ -1,15 +1,15 @@
 ---
 layout: post
-title:  "Notas sobre DDD do jeito certo - Atacando a complexidade"  
+title:  "Notas sobre DDD do jeito certo - 1 - Atacando a complexidade"  
 date:   2020-10-31 23:59:00 -0300
 categories: DDD
 ---
 
-Na empresa em que trabalho, propus que pegássemos algum conteúdo sobre desenvolvimento de *software* e realizássemos reuniões periódicas para discutir esse conteúdo, buscando trazer sempre coisas novas para a empresa e evoluir continuamente a maturidade do time.
-Nessas reuniões, atualmente estamos discutindo a *playlist* [DDD do jeito certo](https://www.youtube.com/watch?v=2X9Q97u4tUg&list=PLkpjQs-GfEMN8CHp7tIQqg6JFowrIX9ve), criada pelo [Elemar Jr.](https://twitter.com/elemarjr) no canal de Youtube da [EximiaCo](https://www.youtube.com/c/EximiaCo).
-Uma vez que costumo fazer anotações para essas reuniões, achei que pode ser interessante registrar essas anotações aqui no blog.
-
-Este artigo apresenta minhas anotações para a nossa reunião sobre o primeiro vídeo dessa playlist, 
+> Na empresa em que trabalho, propus que pegássemos algum conteúdo sobre desenvolvimento de *software* e realizássemos reuniões periódicas para discutir esse conteúdo, buscando trazer sempre coisas novas para a empresa e evoluir continuamente a maturidade do time.
+> Nessas reuniões, atualmente estamos discutindo a *playlist* [DDD do jeito certo](https://www.youtube.com/watch?v=2X9Q97u4tUg&list=PLkpjQs-GfEMN8CHp7tIQqg6JFowrIX9ve), criada pelo [Elemar Jr.](https://twitter.com/elemarjr) no canal de Youtube da [EximiaCo](https://www.youtube.com/c/EximiaCo).
+> Uma vez que costumo fazer anotações para essas reuniões, achei que pode ser interessante registrar essas anotações aqui no blog.
+> 
+> Este artigo apresenta minhas anotações para a nossa reunião sobre o primeiro vídeo dessa playlist, 
 [Atacando a complexidade | DDD do jeito certo | Parte 01](https://youtu.be/2X9Q97u4tUg)
 
 ## Visão geral
