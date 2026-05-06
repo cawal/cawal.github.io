@@ -1,0 +1,54 @@
+I"<p>I’ve adapted the <a href="https://gist.github.com/CodeMyUI/d5a6a6d98251de21b934c7c577cce147">CodeMyUI’s pure CSS timeline</a> for creating timelines in Jekyll-based blog posts (kramdown, essentially). The new CSS allows the user to create the timeline by defining a markdown table.</p>
+
+<p>To create timelines (assuming the user uses the default configurations for SASS in jekyll), the user must copy the <a href="https://github.com/cawal/cawal.github.io/blob/master/_sass/_timeline.scss">timeline SCSS file</a> to the <code class="language-plaintext highlighter-rouge">_sass</code>folder of his Jekyll blog. Then, the user must add this file in the <code class="language-plaintext highlighter-rouge">@import</code> declaration in the <code class="language-plaintext highlighter-rouge">css/main.scss</code> file, also adding the following variable declarations to the <code class="language-plaintext highlighter-rouge">css/main.scss</code> file PRIOR to the <code class="language-plaintext highlighter-rouge">@import</code> declaration.</p>
+
+<div class="language-sass highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$timeline-background-color</span><span class="p">:</span> <span class="nv">$background-color</span><span class="err">;</span>
+<span class="nv">$timeline-rule-color</span><span class="p">:</span> <span class="nv">$grey-color</span><span class="err">;</span>
+<span class="nv">$timeline-font-family</span><span class="p">:</span> <span class="nv">$base-font-family</span><span class="err">;</span>
+
+<span class="nv">$timeline-event-background-color</span><span class="p">:</span> <span class="nv">$timeline-background-color</span><span class="err">;</span>
+<span class="nv">$timeline-event-border-color</span><span class="p">:</span> <span class="nv">$grey-color-dark</span><span class="err">;</span>
+<span class="nv">$timeline-big-event-background-color</span><span class="p">:</span> <span class="nv">$timeline-event-background-color</span><span class="err">;</span>
+
+<span class="nv">$timeline-entry-title-color</span><span class="p">:</span> <span class="nv">$grey-color-dark</span><span class="err">;</span>
+<span class="nv">$timeline-entry-body-color</span><span class="p">:</span> <span class="nv">$grey-color</span><span class="err">;</span>
+</code></pre></div></div>
+
+<p>Note I’m reusing some variables existing in the default Jekyll theme. Fell free to change them.</p>
+
+<p>With the CSS set, the user must create a markdown table in some page. In this table, the first cell of each line will be the title of the timeline entry, while the second cell of each row will be the body of the entry. Finally, the user must add the CSS class <code class="language-plaintext highlighter-rouge">.timeline-md</code> to the table using the <code class="language-plaintext highlighter-rouge">{: .timeline-md}</code> syntax. This will allow to create a table similar to this one…</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>| 11,988 |  Hari Seldon and Cleon I are born on Helicon and Trantor, respectively. |
+| 12,020 | Hari Seldon arrives on Trantor to deliver his paper outlining his theory of psychohistory, a method of predicting the future along mass social change in humanity. (Events of Prelude to Foundation) |
+| 12,067 | Hari Seldon goes on trial by the Commission of Public Safety, and the Encyclopedia Galactica Foundation is exiled to/established on Terminus (Events of "The Psychohistorians" in Foundation) |
+| 12,069 | Hary Seldon dies. |
+{: .timeline-md}
+</code></pre></div></div>
+
+<p>… and to obtain a timeline similar to this one…</p>
+
+<table class="timeline-md">
+  <tbody>
+    <tr>
+      <td>11,988</td>
+      <td>Hari Seldon and Cleon I are born on Helicon and Trantor, respectively.</td>
+    </tr>
+    <tr>
+      <td>12,020</td>
+      <td>Hari Seldon arrives on Trantor to deliver his paper outlining his theory of psychohistory, a method of predicting the future along mass social change in humanity. (Events of Prelude to Foundation)</td>
+    </tr>
+    <tr>
+      <td>12,067</td>
+      <td>Hari Seldon goes on trial by the Commission of Public Safety, and the Encyclopedia Galactica Foundation is exiled to/established on Terminus (Events of “The Psychohistorians” in Foundation)</td>
+    </tr>
+    <tr>
+      <td>12,069</td>
+      <td>Hary Seldon dies.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>No ordering or other features are provided.</p>
+
+<p>(Table data based in the <a href="https://en.wikipedia.org/wiki/Foundation_series">Wikipedia article for the Foundation Series</a>)</p>
+:ET
