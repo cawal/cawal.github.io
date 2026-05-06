@@ -28,7 +28,7 @@ jobs:
         run: |
           BASE_PATH="${{ steps.pages.outputs.base_path }}"
           if [ -n "$BASE_PATH" ]; then
-            BASEURL_ARG="--baseurl $BASE_PATH"
+            BASEURL_ARG="--baseurl \"$BASE_PATH\""
           else
             BASEURL_ARG=""
           fi
