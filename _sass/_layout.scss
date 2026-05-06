@@ -340,6 +340,32 @@
     border-bottom: 1px solid rgba(17, 17, 17, 0.16);
 }
 
+.post-banner {
+    position: relative;
+    margin: 24px 0 0;
+    overflow: hidden;
+    background: #e7e0cf;
+
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: radial-gradient(circle, rgba(17, 17, 17, 0.9) 20%, transparent 21%);
+        background-size: 4px 4px;
+        opacity: 0.12;
+        pointer-events: none;
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        max-height: 28rem;
+        object-fit: cover;
+        filter: grayscale(1) sepia(0.2) brightness(0.8) contrast(1.5) blur(0.5px);
+        mix-blend-mode: multiply;
+    }
+}
+
 .post-title {
     margin-bottom: 0;
 
@@ -498,6 +524,10 @@
 
     .post-link {
         font-size: 1.9rem;
+    }
+
+    .post-banner img {
+        max-height: 18rem;
     }
 
     .home-subtitle {
