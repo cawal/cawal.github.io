@@ -1,7 +1,7 @@
 ---
 layout: post
 title: File over app
-date: 2023-06-30 00:00:00 -0300
+date: 2026-05-06 00:00:00 -0300
 source: https://stephango.com/file-over-app
 published: true
 description: If you want to create digital artifacts that last, they must be files you can control, in formats that are easy to retrieve and read. Use tools that give you...
