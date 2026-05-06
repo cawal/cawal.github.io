@@ -23,6 +23,12 @@ body {
     -o-font-feature-settings: "kern" 1;
     font-feature-settings: "kern" 1;
     font-kerning: normal;
+    min-height: 100vh;
+}
+
+.site-shell {
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -82,7 +88,42 @@ li {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-    font-weight: $base-font-weight;
+    color: $grey-color-dark;
+    font-family: $display-font-family;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+
+h2 {
+    font-size: 2.2rem;
+}
+
+h3 {
+    font-size: 1.6rem;
+}
+
+h4,
+h5,
+h6 {
+    font-size: 1.15rem;
+}
+
+p,
+li,
+dd,
+dt {
+    color: #dddddc;
+}
+
+strong,
+b {
+    color: $grey-color-dark;
+    font-weight: 600;
 }
 
 
@@ -93,14 +134,15 @@ h1, h2, h3, h4, h5, h6 {
 a {
     color: $brand-color;
     text-decoration: none;
+    transition: color 0.15s ease, opacity 0.15s ease, border-color 0.15s ease;
 
     &:visited {
-        color: darken($brand-color, 15%);
+        color: $brand-color;
     }
 
     &:hover {
-        color: $text-color;
-        text-decoration: underline;
+        color: #ffffff;
+        text-decoration: none;
     }
 }
 
@@ -110,12 +152,14 @@ a {
  * Blockquotes
  */
 blockquote {
-    color: $grey-color;
-    border-left: 4px solid $grey-color-light;
-    padding-left: $spacing-unit / 2;
-    font-size: 18px;
-    letter-spacing: -1px;
-    font-style: italic;
+    color: #efefef;
+    border-left: 2px solid $grey-color-dark;
+    padding: $spacing-unit / 3 0 $spacing-unit / 3 $spacing-unit / 1.5;
+    font-family: $serif-font-family;
+    font-size: 1.05rem;
+    letter-spacing: 0;
+    font-style: normal;
+    background: rgba(255, 255, 255, 0.03);
 
     > :last-child {
         margin-bottom: 0;
@@ -129,25 +173,35 @@ blockquote {
  */
 pre,
 code {
-    font-size: 15px;
-    border: 1px solid $grey-color-light;
-    border-radius: 3px;
-    background-color: #eef;
+    font-family: $mono-font-family;
+    font-size: 0.92rem;
+    border: 1px solid $border-color;
+    border-radius: 4px;
+    background-color: $surface-color;
 }
 
 code {
-    padding: 1px 5px;
+    color: #f9d98c;
+    padding: 2px 6px;
 }
 
 pre {
-    padding: 8px 12px;
+    color: #f3f3f3;
+    padding: 14px 18px;
     overflow-x: auto;
+    box-shadow: 0 12px 30px -20px $shadow-color;
 
     > code {
         border: 0;
+        color: inherit;
         padding-right: 0;
         padding-left: 0;
     }
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid $border-color;
 }
 
 
@@ -170,6 +224,15 @@ pre {
         padding-right: $spacing-unit / 2;
         padding-left: $spacing-unit / 2;
     }
+}
+
+main {
+    display: block;
+}
+
+::selection {
+    background: rgba(255, 255, 255, 0.18);
+    color: #ffffff;
 }
 
 
@@ -202,5 +265,35 @@ pre {
         path {
             fill: $grey-color;
         }
+    }
+}
+
+@include media-query($on-desktop) {
+    h1 {
+        font-size: 3rem;
+    }
+}
+
+@include media-query($on-laptop) {
+    h1 {
+        font-size: 2.6rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+@include media-query($on-palm) {
+    h1 {
+        font-size: 2.15rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    h3 {
+        font-size: 1.4rem;
     }
 }
