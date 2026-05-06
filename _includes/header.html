@@ -1,11 +1,7 @@
 <header class="site-header">
   <div class="wrapper site-header-inner">
     <nav class="site-nav" aria-label="Primary">
-      {% for my_page in site.pages %}
-        {% if my_page.title %}
-        <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
-        {% endif %}
-      {% endfor %}
+      {% include nav-links.html %}
     </nav>
   </div>
 </header>

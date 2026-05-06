@@ -2,19 +2,15 @@
  * Site header
  */
 .site-header {
-    border-bottom: 1px solid $border-color;
-    background: rgba(18, 18, 18, 0.96);
-    position: sticky;
-    top: 0;
-    z-index: 20;
-    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(17, 17, 17, 0.18);
+    background: transparent;
 }
 
 .site-header-inner {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 18px;
+    padding-top: 22px;
     padding-bottom: 18px;
 }
 
@@ -25,7 +21,7 @@
     gap: 28px;
 
     .page-link {
-        color: $grey-color-dark;
+        color: #111111;
         line-height: 1;
         padding: 0;
         text-transform: uppercase;
@@ -46,23 +42,26 @@
  */
 .site-footer {
     margin-top: auto;
-    border-top: 1px solid $border-color;
-    padding: $spacing-unit * 1.5 0;
-    background: #101010;
+    border-top: 1px solid rgba(17, 17, 17, 0.18);
+    padding: $spacing-unit 0;
+    background: transparent;
 }
 
 .site-footer-inner {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-between;
     gap: $spacing-unit;
 }
 
 .footer-heading {
-    margin-bottom: 10px;
-    color: $grey-color-dark;
-    font-family: $display-font-family;
-    font-size: 1.6rem;
+    margin-bottom: 4px;
+    color: #111111;
+    font-family: $base-font-family;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
 }
 
 .social-media-list {
@@ -75,35 +74,24 @@
 }
 
 .footer-copy {
-    margin-bottom: 6px;
-    color: $grey-color;
+    margin-bottom: 0;
+    color: rgba(17, 17, 17, 0.72);
     max-width: 40rem;
+    font-size: 0.92rem;
 }
 
 .footer-meta {
     display: flex;
     align-items: center;
-    gap: 18px;
-}
-
-.footer-glider {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 8px;
-    border: 1px solid $border-color;
-    background: $surface-color;
-
-    img {
-        width: 26px;
-        height: 26px;
-        object-fit: contain;
-        opacity: 0.85;
-    }
+    gap: 14px;
 }
 
 .social-media-list .username {
     display: none;
+}
+
+.social-media-list .icon > svg path {
+    fill: #111111;
 }
 
 
@@ -118,33 +106,11 @@
 
 .home-page {
     .site-header {
-        border-bottom-color: rgba(17, 17, 17, 0.2);
-        background: rgba(251, 251, 248, 0.96);
-    }
-
-    .site-nav .page-link {
-        color: #111111;
+        display: none;
     }
 
     .page-content {
         padding-top: 0;
-    }
-
-    .site-footer {
-        border-top-color: rgba(17, 17, 17, 0.2);
-        background: #fbfbf8;
-    }
-
-    .footer-heading,
-    .footer-copy,
-    .social-media-list .icon > svg path {
-        color: #111111;
-        fill: #111111;
-    }
-
-    .footer-glider {
-        border-color: rgba(17, 17, 17, 0.2);
-        background: transparent;
     }
 }
 
@@ -153,42 +119,59 @@
 }
 
 .home {
-    min-height: calc(100vh - 220px);
+    min-height: calc(100vh - 170px);
+}
+
+.home-topline {
+    border-top: 1px solid rgba(17, 17, 17, 0.7);
+    margin-top: 24px;
 }
 
 .home-masthead {
-    padding: 9rem 0 8rem;
+    padding: 5.5rem 0 8rem;
     text-align: center;
 }
 
 .home-title {
     margin-bottom: 20px;
-    font-size: 6.5rem;
+    font-size: 6.9rem;
     line-height: 0.95;
     color: #111111;
 }
 
 .home-subtitle {
     max-width: 38rem;
-    margin: 0 auto;
+    margin: 0 auto 2.75rem;
     color: inherit;
     font-family: $serif-font-family;
     font-size: 1.45rem;
     font-style: italic;
 }
 
+.home-nav-shell {
+    max-width: 70rem;
+    margin: 0 auto;
+    padding: 0.95rem 0 0.85rem;
+    border-top: 1px solid rgba(17, 17, 17, 0.65);
+    border-bottom: 1px solid rgba(17, 17, 17, 0.65);
+}
+
+.home-nav {
+    gap: 34px;
+}
+
 .post-list {
     margin-left: 0;
     list-style: none;
     display: grid;
-    gap: 18px;
+    gap: 0;
 
     > li {
         margin-bottom: 0;
-        padding: 24px;
-        border: 1px solid $border-color;
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.015));
-        box-shadow: 0 18px 40px -30px $shadow-color;
+        padding: 28px 0;
+        border-bottom: 1px solid rgba(17, 17, 17, 0.16);
+        background: transparent;
+        box-shadow: none;
     }
 }
 
@@ -204,7 +187,7 @@
 .post-link {
     display: block;
     margin-bottom: 12px;
-    color: $grey-color-dark;
+    color: #111111;
     font-family: $display-font-family;
     font-size: 2rem;
     line-height: 1.15;
@@ -212,7 +195,7 @@
 
 .post-excerpt,
 .rss-subscribe {
-    color: #cccccb;
+    color: rgba(17, 17, 17, 0.78);
 }
 
 
@@ -223,7 +206,7 @@
 .post-header {
     margin-bottom: $spacing-unit * 1.1;
     padding-bottom: 18px;
-    border-bottom: 1px solid $border-color;
+    border-bottom: 1px solid rgba(17, 17, 17, 0.16);
 }
 
 .post-title {
@@ -242,7 +225,7 @@
 
 .post-content {
     margin-bottom: $spacing-unit;
-    color: #dfdfde;
+    color: #1a1a1a;
 
     > p,
     > ul,
@@ -282,10 +265,10 @@
     }
 
     a {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.28);
+        border-bottom: 1px solid rgba(17, 17, 17, 0.28);
 
         &:hover {
-            border-color: rgba(255, 255, 255, 0.65);
+            border-color: rgba(17, 17, 17, 0.65);
         }
     }
 }
@@ -299,7 +282,8 @@
 @include media-query($on-laptop) {
     .site-footer-inner {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        text-align: center;
     }
 
     .site-nav,
@@ -313,6 +297,10 @@
 
     .home-title {
         font-size: 4.5rem;
+    }
+
+    .home-nav {
+        gap: 22px;
     }
 }
 
@@ -330,11 +318,11 @@
     }
 
     .home {
-        min-height: calc(100vh - 180px);
+        min-height: calc(100vh - 150px);
     }
 
     .home-masthead {
-        padding: 5.5rem 0 4.5rem;
+        padding: 4rem 0 4.5rem;
     }
 
     .home-title {
@@ -342,7 +330,7 @@
     }
 
     .post-list > li {
-        padding: 18px;
+        padding: 20px 0;
     }
 
     .post-link {
@@ -351,5 +339,10 @@
 
     .home-subtitle {
         font-size: 1.1rem;
+    }
+
+    .home-nav-shell {
+        padding-right: 8px;
+        padding-left: 8px;
     }
 }

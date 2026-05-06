@@ -15,8 +15,8 @@ dl, dd, ol, ul, figure {
  */
 body {
     font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
-    color: $text-color;
-    background-color: $background-color;
+    color: #111111;
+    background-color: #d9d4cc;
     -webkit-text-size-adjust: 100%;
     -webkit-font-feature-settings: "kern" 1;
     -moz-font-feature-settings: "kern" 1;
@@ -29,11 +29,18 @@ body {
 .site-shell {
     display: flex;
     flex-direction: column;
+    padding: 24px;
 }
 
-.home-page {
-    color: #111111;
+.site-frame {
+    width: 100%;
+    max-width: 1320px;
+    min-height: calc(100vh - 48px);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
     background: #fbfbf8;
+    border: 1px solid rgba(17, 17, 17, 0.14);
 }
 
 
@@ -122,13 +129,6 @@ p,
 li,
 dd,
 dt {
-    color: #dddddc;
-}
-
-.home-page p,
-.home-page li,
-.home-page dd,
-.home-page dt {
     color: #111111;
 }
 
@@ -144,23 +144,18 @@ b {
  * Links
  */
 a {
-    color: $brand-color;
+    color: #111111;
     text-decoration: none;
     transition: color 0.15s ease, opacity 0.15s ease, border-color 0.15s ease;
 
     &:visited {
-        color: $brand-color;
+        color: #111111;
     }
 
     &:hover {
-        color: #ffffff;
+        color: #444444;
         text-decoration: none;
     }
-}
-
-.home-page a,
-.home-page a:visited {
-    color: #111111;
 }
 
 
@@ -169,14 +164,14 @@ a {
  * Blockquotes
  */
 blockquote {
-    color: #efefef;
-    border-left: 2px solid $grey-color-dark;
+    color: #1f1f1f;
+    border-left: 2px solid rgba(17, 17, 17, 0.65);
     padding: $spacing-unit / 3 0 $spacing-unit / 3 $spacing-unit / 1.5;
     font-family: $serif-font-family;
     font-size: 1.05rem;
     letter-spacing: 0;
     font-style: normal;
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(17, 17, 17, 0.03);
 
     > :last-child {
         margin-bottom: 0;
@@ -218,7 +213,7 @@ pre {
 
 hr {
     border: 0;
-    border-top: 1px solid $border-color;
+    border-top: 1px solid rgba(17, 17, 17, 0.16);
 }
 
 
@@ -248,8 +243,8 @@ main {
 }
 
 ::selection {
-    background: rgba(255, 255, 255, 0.18);
-    color: #ffffff;
+    background: rgba(17, 17, 17, 0.18);
+    color: #111111;
 }
 
 
@@ -302,6 +297,14 @@ main {
 }
 
 @include media-query($on-palm) {
+    .site-shell {
+        padding: 12px;
+    }
+
+    .site-frame {
+        min-height: calc(100vh - 24px);
+    }
+
     h1 {
         font-size: 2.15rem;
     }

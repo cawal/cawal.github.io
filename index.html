@@ -4,8 +4,14 @@ title: ""
 permalink: /
 ---
 <div class="home">
+  <div class="home-topline" aria-hidden="true"></div>
   <section class="home-masthead">
     <h1 class="home-title">{{ site.title }}</h1>
     <p class="home-subtitle">{{ site.description | strip }}</p>
+    <div class="home-nav-shell">
+      <nav class="site-nav home-nav" aria-label="Primary">
+        {% include nav-links.html %}
+      </nav>
+    </div>
   </section>
 </div>
