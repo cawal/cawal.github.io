@@ -1,0 +1,18 @@
+edition_label: "Edição diária"
+editorial_label: "Editorial"
+editor_note:
+  title: "Nota do editor"
+  body:
+    - "Este é um site pessoal construído sem pressa. Não há rastreadores, não há pop-ups. Apenas texto estruturado."
+    - "Sinta-se à vontade para explorar os textos, consultar as referências e aproveitar a leitura."
+references:
+  title: "Últimas referências"
+  cta_label: ""
+  cta_url: ""
+  items:
+    - title: "Músicas para ouvir trabalhando"
+      description: "Retrowave, atmospheric drum and bass e mais!"
+      url: "https://www.youtube.com/watch?v=6nGITYREWF4&list=PLt-ee10f5vzVEd_qg64JdJUOCdyyurdSq"
+    - title: "LEADERSHIP LAB: The Craft of Writing Efectively @ Youtube"
+      description: "You think writing is conveying your ideas to your readers, it's not..... It's changing their ideas."
+      url: "https://www.youtube.com/watch?v=vtIzMaLkCaM"

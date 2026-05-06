@@ -15,14 +15,31 @@ dl, dd, ol, ul, figure {
  */
 body {
     font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
-    color: $text-color;
-    background-color: $background-color;
+    color: #111111;
+    background-color: #fbfbf8;
     -webkit-text-size-adjust: 100%;
     -webkit-font-feature-settings: "kern" 1;
     -moz-font-feature-settings: "kern" 1;
     -o-font-feature-settings: "kern" 1;
     font-feature-settings: "kern" 1;
     font-kerning: normal;
+    min-height: 100vh;
+}
+
+.site-shell {
+    display: flex;
+    flex-direction: column;
+    padding: 0 24px 24px;
+}
+
+.site-frame {
+    width: 100%;
+    max-width: 1320px;
+    min-height: calc(100vh - 48px);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background: #fbfbf8;
 }
 
 
@@ -82,7 +99,42 @@ li {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-    font-weight: $base-font-weight;
+    color: #111111;
+    font-family: $display-font-family;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+}
+
+h1 {
+    font-size: 3.9rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+h4,
+h5,
+h6 {
+    font-size: 1.15rem;
+}
+
+p,
+li,
+dd,
+dt {
+    color: #111111;
+}
+
+strong,
+b {
+    color: $grey-color-dark;
+    font-weight: 600;
 }
 
 
@@ -91,16 +143,17 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-    color: $brand-color;
+    color: #111111;
     text-decoration: none;
+    transition: color 0.15s ease, opacity 0.15s ease, border-color 0.15s ease;
 
     &:visited {
-        color: darken($brand-color, 15%);
+        color: #111111;
     }
 
     &:hover {
-        color: $text-color;
-        text-decoration: underline;
+        color: #444444;
+        text-decoration: none;
     }
 }
 
@@ -110,12 +163,14 @@ a {
  * Blockquotes
  */
 blockquote {
-    color: $grey-color;
-    border-left: 4px solid $grey-color-light;
-    padding-left: $spacing-unit / 2;
-    font-size: 18px;
-    letter-spacing: -1px;
-    font-style: italic;
+    color: #1f1f1f;
+    border-left: 2px solid rgba(17, 17, 17, 0.65);
+    padding: $spacing-unit / 3 0 $spacing-unit / 3 $spacing-unit / 1.5;
+    font-family: $serif-font-family;
+    font-size: 1.05rem;
+    letter-spacing: 0;
+    font-style: normal;
+    background: rgba(17, 17, 17, 0.03);
 
     > :last-child {
         margin-bottom: 0;
@@ -127,27 +182,40 @@ blockquote {
 /**
  * Code formatting
  */
-pre,
 code {
-    font-size: 15px;
-    border: 1px solid $grey-color-light;
-    border-radius: 3px;
-    background-color: #eef;
+    font-family: $mono-font-family;
+    font-size: 0.92rem;
+    border: 1px solid rgba(17, 17, 17, 0.12);
+    border-radius: 4px;
+    background-color: transparent;
 }
 
 code {
-    padding: 1px 5px;
+    color: #222222;
+    padding: 2px 6px;
 }
 
 pre {
-    padding: 8px 12px;
+    color: #222222;
+    padding: 14px 18px;
     overflow-x: auto;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
 
     > code {
         border: 0;
+        color: inherit;
+        background: transparent;
         padding-right: 0;
         padding-left: 0;
     }
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid rgba(17, 17, 17, 0.16);
 }
 
 
@@ -167,9 +235,18 @@ pre {
     @include media-query($on-laptop) {
         max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
         max-width:         calc(#{$content-width} - (#{$spacing-unit}));
-        padding-right: $spacing-unit / 2;
-        padding-left: $spacing-unit / 2;
+        padding-right: $spacing-unit;
+        padding-left: $spacing-unit;
     }
+}
+
+main {
+    display: block;
+}
+
+::selection {
+    background: rgba(17, 17, 17, 0.18);
+    color: #111111;
 }
 
 
@@ -202,5 +279,43 @@ pre {
         path {
             fill: $grey-color;
         }
+    }
+}
+
+@include media-query($on-desktop) {
+    h1 {
+        font-size: 3.3rem;
+    }
+}
+
+@include media-query($on-laptop) {
+    h1 {
+        font-size: 2.9rem;
+    }
+
+    h2 {
+        font-size: 2.2rem;
+    }
+}
+
+@include media-query($on-palm) {
+    .site-shell {
+        padding: 0 12px 12px;
+    }
+
+    .site-frame {
+        min-height: calc(100vh - 24px);
+    }
+
+    h1 {
+        font-size: 2.35rem;
+    }
+
+    h2 {
+        font-size: 1.95rem;
+    }
+
+    h3 {
+        font-size: 1.55rem;
     }
 }

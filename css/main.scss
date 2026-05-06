@@ -3,37 +3,43 @@
 ---
 @charset "utf-8";
 // Our variables
-$base-font-family: "Helvetica Neue",
-Helvetica,
-Arial,
-sans-serif;
-$base-font-size: 16px;
+$base-font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+$display-font-family: "Playfair Display", Georgia, serif;
+$serif-font-family: "Libre Baskerville", Georgia, serif;
+$mono-font-family: "Menlo", "Monaco", "Courier New", monospace;
+$base-font-size: 18px;
 $base-font-weight: 400;
 $small-font-size: $base-font-size * 0.875;
-$base-line-height: 1.5;
-$spacing-unit: 30px;
-$text-color: #111;
-$background-color: #fdfdfd;
-$brand-color: #2a7ae2;
-$grey-color: #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark: darken($grey-color, 25%);
+$base-line-height: 1.7;
+$spacing-unit: 32px;
+$text-color: #f5f5f4;
+$background-color: #121212;
+$surface-color: #1a1a1a;
+$surface-color-soft: #202020;
+$brand-color: #f5f5f4;
+$grey-color: #a3a3a3;
+$grey-color-light: #3a3a3a;
+$grey-color-dark: #e7e5e4;
+$border-color: rgba(255, 255, 255, 0.16);
+$border-color-strong: rgba(255, 255, 255, 0.28);
+$shadow-color: rgba(0, 0, 0, 0.35);
 // Width of the content area
-$content-width: 800px;
-$on-palm: 600px;
-$on-laptop: 800px;
+$content-width: 1240px;
+$on-palm: 640px;
+$on-laptop: 768px;
+$on-desktop: 1024px;
 
 // TIMELINE:
-$timeline-background-color: $background-color;
-$timeline-rule-color: $grey-color;
+$timeline-background-color: $surface-color;
+$timeline-rule-color: $grey-color-light;
 $timeline-font-family: $base-font-family;
 
-$timeline-event-background-color: $timeline-background-color;
+$timeline-event-background-color: $surface-color-soft;
 $timeline-event-border-color: $grey-color-dark;
-$timeline-big-event-background-color: $timeline-event-background-color;
+$timeline-big-event-background-color: $surface-color;
 
 $timeline-entry-title-color: $grey-color-dark;
-$timeline-entry-body-color: $grey-color;
+$timeline-entry-body-color: #c5c5c5;
 
 // Use media queries like this:
 // @include media-query($on-palm) {

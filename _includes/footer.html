@@ -1,45 +1,24 @@
 <footer class="site-footer">
-
-  <div class="wrapper">
-
-    <h2 class="footer-heading">{{ site.title }}</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li>{{ site.name }}</li>
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
-          {% if site.github_username %}
-          <li>
-            {% include icon-github.html username=site.github_username %}
-          </li>
-          {% endif %}
-
-          {% if site.twitter_username %}
-          <li>
-            {% include icon-twitter.html username=site.twitter_username %}
-          </li>
-          {% endif %}
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-3">
-        <div style="display:inline-block;width:80%">
-	  <p>{{ site.description }}</p>
-	</div>
-	<div style="display:inline-block;vertical-align:top;margin-left:5px">
-	  <a href="http://www.catb.org/~esr/faqs/hacker-howto.html#attitude" target="_blank">
-		  <img src="/assets/glider.png"/>
-	  </a>
-	</div>
-      </div>
+  <div class="wrapper site-footer-inner">
+    <div>
+      <p class="footer-heading">{{ site.title }}</p>
+      <p class="footer-copy">{{ site.name }}</p>
     </div>
 
-  </div>
+    <div class="footer-meta">
+      <ul class="social-media-list">
+        {% if site.github_username %}
+        <li>
+          {% include icon-github.html username=site.github_username %}
+        </li>
+        {% endif %}
 
+        {% if site.twitter_username %}
+        <li>
+          {% include icon-twitter.html username=site.twitter_username %}
+        </li>
+        {% endif %}
+      </ul>
+    </div>
+  </div>
 </footer>

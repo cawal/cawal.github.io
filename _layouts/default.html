@@ -3,17 +3,19 @@
 
   {% include head.html %}
 
-  <body>
+  <body class="site-shell{% if page.url == '/' %} home-page{% endif %}">
+    <div class="site-frame">
 
-    {% include header.html %}
+      {% include header.html %}
 
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
+      <main class="page-content" aria-label="Content">
+        <div class="wrapper">
+          {{ content }}
+        </div>
+      </main>
+
+      {% include footer.html %}
     </div>
-
-    {% include footer.html %}
 
   </body>
 
