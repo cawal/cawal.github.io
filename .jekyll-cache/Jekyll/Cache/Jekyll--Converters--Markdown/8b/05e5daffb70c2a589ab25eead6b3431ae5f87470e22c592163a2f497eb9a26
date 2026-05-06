@@ -1,16 +1,0 @@
-I"<p>Tenho usado muito Kotlin em meus projetos Java: é uma linguagem muito agradável de utilizar, com boas abstrações e que interopera eficientemente com todo o conjunto de bibliotecas já existentes para Java. Passando pelo Kotlin Playground, vi que é possível adicionar um mini-bloco de código Kotlin uma página pessoal de maneira editável e executável (ótimo para representar pequenos exemplos).
-Esse post é um teste para a adição que fiz dessa funcionalidade aqui no blog:</p>
-
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">fun</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span> 
-	<span class="nf">print</span><span class="p">(</span><span class="s">"Hello, Kt!"</span><span class="p">)</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<p>Para incluir o Kotlin Playground automaticamente nas caixas de código de seu site Jekyll, adicione à <em>tag</em> <code class="language-plaintext highlighter-rouge">&lt;head&gt;</code> de sua página (no meu caso, definido em <code class="language-plaintext highlighter-rouge">_includes/head.html</code>) a <em>tag</em> abaixo:</p>
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://unpkg.com/kotlin-playground@1"</span> <span class="na">data-selector=</span><span class="s">".language-kotlin"</span><span class="nt">&gt;&lt;/script&gt;</span>
-</code></pre></div></div>
-<p>O <em>script</em> automaticamente reconhece caixas de código marcadas como <code class="language-plaintext highlighter-rouge">kotlin</code> por causa do atributo <code class="language-plaintext highlighter-rouge">data-selector=".language-kotlin"</code>.</p>
-
-<p>Mais informações no <a href="https://blog.jetbrains.com/kotlin/2018/04/embedding-kotlin-playground/">Blog da Jetbrains</a> e no <a href="https://github.com/JetBrains/kotlin-playground#installation">repositório no Github</a>.</p>
-
-:ET

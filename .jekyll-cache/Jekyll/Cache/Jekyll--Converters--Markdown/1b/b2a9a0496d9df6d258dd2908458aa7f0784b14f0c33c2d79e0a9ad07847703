@@ -1,2 +1,0 @@
-I"%<p>I’ve adapted the <a href="https://gist.github.com/CodeMyUI/d5a6a6d98251de21b934c7c577cce147">CodeMyUI’s pure CSS timeline</a> for creating timelines in Jekyll-based blog posts (kramdown, essentially). The new CSS allows the user to create the timeline by defining a markdown table.</p>
-:ET

@@ -26,9 +26,15 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Build the site in the jekyll/builder container
         run: |
+          BASE_PATH="${{ steps.pages.outputs.base_path }}"
+          if [ -n "$BASE_PATH" ]; then
+            BASEURL_ARG="--baseurl $BASE_PATH"
+          else
+            BASEURL_ARG=""
+          fi
           docker run \
           -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-          jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future --baseurl '${{ steps.pages.outputs.base_path }}'"
+          jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future $BASEURL_ARG"
       - name: Upload artifact
         if: github.ref == 'refs/heads/master'
         uses: actions/upload-pages-artifact@v3
