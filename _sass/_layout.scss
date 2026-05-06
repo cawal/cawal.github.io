@@ -10,7 +10,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 22px;
+    padding-top: 26px;
     padding-bottom: 18px;
 }
 
@@ -26,7 +26,7 @@
         padding: 0;
         text-transform: uppercase;
         letter-spacing: 0.08em;
-        font-size: 0.88rem;
+        font-size: 0.95rem;
         font-weight: 600;
 
         &:hover {
@@ -101,7 +101,7 @@
  */
 .page-content {
     flex: 1;
-    padding: $spacing-unit * 1.5 0 $spacing-unit * 2;
+    padding: $spacing-unit * 1.8 0 $spacing-unit * 2.2;
 }
 
 .home-page {
@@ -122,29 +122,42 @@
     min-height: calc(100vh - 170px);
 }
 
-.home-topline {
+.home-meta-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding-top: 30px;
+    padding-bottom: 12px;
     border-top: 1px solid rgba(17, 17, 17, 0.7);
-    margin-top: 24px;
+}
+
+.home-meta-label {
+    margin-bottom: 0;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
 }
 
 .home-masthead {
-    padding: 5.5rem 0 8rem;
+    padding: 2.75rem 0 4rem;
     text-align: center;
 }
 
 .home-title {
     margin-bottom: 20px;
-    font-size: 6.9rem;
+    font-size: 7.8rem;
     line-height: 0.95;
     color: #111111;
 }
 
 .home-subtitle {
     max-width: 38rem;
-    margin: 0 auto 2.75rem;
+    margin: 0 auto 2.9rem;
     color: inherit;
     font-family: $serif-font-family;
-    font-size: 1.45rem;
+    font-size: 1.55rem;
     font-style: italic;
 }
 
@@ -160,6 +173,122 @@
     gap: 34px;
 }
 
+.home-editorial {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(280px, 0.95fr);
+    gap: 40px;
+    padding-top: 1.25rem;
+}
+
+.home-editorial-main {
+    padding-right: 28px;
+    border-right: 1px solid rgba(17, 17, 17, 0.2);
+}
+
+.section-kicker {
+    margin-bottom: 18px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+}
+
+.home-featured-title {
+    margin-bottom: 26px;
+    font-size: 4.35rem;
+    line-height: 0.95;
+}
+
+.home-featured-summary {
+    max-width: 38rem;
+    margin-bottom: 24px;
+    font-size: 1.35rem;
+    line-height: 1.6;
+}
+
+.home-featured-cta,
+.home-links-cta {
+    display: inline-block;
+    margin-bottom: 36px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.home-secondary-posts {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+    padding-top: 28px;
+    border-top: 1px solid rgba(17, 17, 17, 0.16);
+}
+
+.home-secondary-post h3 {
+    margin-bottom: 14px;
+    font-size: 2.25rem;
+}
+
+.home-secondary-post p {
+    margin-bottom: 0;
+    font-size: 1.18rem;
+    line-height: 1.65;
+}
+
+.home-sidebar {
+    display: grid;
+    align-content: start;
+    gap: 32px;
+}
+
+.home-note-panel {
+    padding: 28px 28px 20px;
+    background: #111111;
+    color: #fbfbf8;
+}
+
+.home-note-panel h2,
+.home-note-panel p {
+    color: #fbfbf8;
+}
+
+.home-note-panel h2,
+.home-links-panel h2 {
+    margin-bottom: 18px;
+    font-family: $base-font-family;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+}
+
+.home-note-panel p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.home-links-panel h2 {
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(17, 17, 17, 0.3);
+}
+
+.home-links-list {
+    display: grid;
+    gap: 18px;
+    margin-bottom: 18px;
+}
+
+.home-link-item h3 {
+    margin-bottom: 6px;
+    font-size: 1.85rem;
+}
+
+.home-link-item p {
+    margin-bottom: 0;
+    font-size: 1.05rem;
+    line-height: 1.55;
+}
+
 .post-list {
     margin-left: 0;
     list-style: none;
@@ -168,7 +297,7 @@
 
     > li {
         margin-bottom: 0;
-        padding: 28px 0;
+        padding: 30px 0;
         border-bottom: 1px solid rgba(17, 17, 17, 0.16);
         background: transparent;
         box-shadow: none;
@@ -178,7 +307,7 @@
 .post-meta {
     display: inline-block;
     margin-bottom: 12px;
-    font-size: 0.75rem;
+    font-size: 0.9rem;
     color: $grey-color;
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -189,13 +318,14 @@
     margin-bottom: 12px;
     color: #111111;
     font-family: $display-font-family;
-    font-size: 2rem;
+    font-size: 2.35rem;
     line-height: 1.15;
 }
 
 .post-excerpt,
 .rss-subscribe {
     color: rgba(17, 17, 17, 0.78);
+    font-size: 1.08rem;
 }
 
 
@@ -275,7 +405,11 @@
 
 @include media-query($on-desktop) {
     .home-title {
-        font-size: 5.5rem;
+        font-size: 6.3rem;
+    }
+
+    .home-featured-title {
+        font-size: 3.7rem;
     }
 }
 
@@ -296,11 +430,24 @@
     }
 
     .home-title {
-        font-size: 4.5rem;
+        font-size: 5rem;
     }
 
     .home-nav {
         gap: 22px;
+    }
+
+    .home-editorial {
+        grid-template-columns: 1fr;
+    }
+
+    .home-editorial-main {
+        padding-right: 0;
+        border-right: 0;
+    }
+
+    .home-featured-title {
+        font-size: 3.15rem;
     }
 }
 
@@ -313,7 +460,7 @@
         gap: 16px 20px;
 
         .page-link {
-            font-size: 0.76rem;
+            font-size: 0.82rem;
         }
     }
 
@@ -321,12 +468,27 @@
         min-height: calc(100vh - 150px);
     }
 
+    .home-meta-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
     .home-masthead {
         padding: 4rem 0 4.5rem;
     }
 
     .home-title {
-        font-size: 3.2rem;
+        font-size: 4rem;
+    }
+
+    .home-featured-title {
+        font-size: 2.65rem;
+    }
+
+    .home-featured-summary,
+    .home-note-panel p,
+    .home-secondary-post p {
+        font-size: 1.12rem;
     }
 
     .post-list > li {
@@ -334,15 +496,19 @@
     }
 
     .post-link {
-        font-size: 1.55rem;
+        font-size: 1.9rem;
     }
 
     .home-subtitle {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
 
     .home-nav-shell {
         padding-right: 8px;
         padding-left: 8px;
+    }
+
+    .home-secondary-posts {
+        grid-template-columns: 1fr;
     }
 }

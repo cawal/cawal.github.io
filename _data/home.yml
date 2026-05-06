@@ -1,0 +1,18 @@
+edition_label: "Edição diária"
+editorial_label: "Editorial"
+editor_note:
+  title: "Nota do editor"
+  body:
+    - "Este é um site pessoal construído sem pressa. Não há rastreadores, não há pop-ups. Apenas texto estruturado."
+    - "Sinta-se à vontade para explorar os textos, consultar as referências e aproveitar a leitura."
+references:
+  title: "Últimas referências"
+  cta_label: ""
+  cta_url: ""
+  items:
+    - title: "O Elogio da Sombra"
+      description: "Um ensaio fundamental sobre a estética japonesa."
+      url: "https://en.wikipedia.org/wiki/In_Praise_of_Shadows"
+    - title: "A Mente Tipográfica"
+      description: "Como as formas das letras moldam nosso pensamento."
+      url: "https://practicaltypography.com/"

@@ -16,7 +16,7 @@ dl, dd, ol, ul, figure {
 body {
     font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
     color: #111111;
-    background-color: #d9d4cc;
+    background-color: #fbfbf8;
     -webkit-text-size-adjust: 100%;
     -webkit-font-feature-settings: "kern" 1;
     -moz-font-feature-settings: "kern" 1;
@@ -29,7 +29,7 @@ body {
 .site-shell {
     display: flex;
     flex-direction: column;
-    padding: 24px;
+    padding: 0 24px 24px;
 }
 
 .site-frame {
@@ -40,7 +40,6 @@ body {
     display: flex;
     flex-direction: column;
     background: #fbfbf8;
-    border: 1px solid rgba(17, 17, 17, 0.14);
 }
 
 
@@ -108,15 +107,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 3.5rem;
+    font-size: 3.9rem;
 }
 
 h2 {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
 }
 
 h3 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
 }
 
 h4,
@@ -233,8 +232,8 @@ hr {
     @include media-query($on-laptop) {
         max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
         max-width:         calc(#{$content-width} - (#{$spacing-unit}));
-        padding-right: $spacing-unit / 2;
-        padding-left: $spacing-unit / 2;
+        padding-right: $spacing-unit;
+        padding-left: $spacing-unit;
     }
 }
 
@@ -282,23 +281,23 @@ main {
 
 @include media-query($on-desktop) {
     h1 {
-        font-size: 3rem;
+        font-size: 3.3rem;
     }
 }
 
 @include media-query($on-laptop) {
     h1 {
-        font-size: 2.6rem;
+        font-size: 2.9rem;
     }
 
     h2 {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
 }
 
 @include media-query($on-palm) {
     .site-shell {
-        padding: 12px;
+        padding: 0 12px 12px;
     }
 
     .site-frame {
@@ -306,14 +305,14 @@ main {
     }
 
     h1 {
-        font-size: 2.15rem;
+        font-size: 2.35rem;
     }
 
     h2 {
-        font-size: 1.75rem;
+        font-size: 1.95rem;
     }
 
     h3 {
-        font-size: 1.4rem;
+        font-size: 1.55rem;
     }
 }

@@ -3,8 +3,13 @@ layout: default
 title: ""
 permalink: /
 ---
+{% assign featured_post = site.posts.first %}
+{% assign secondary_posts = site.posts | slice: 1, 2 %}
 <div class="home">
-  <div class="home-topline" aria-hidden="true"></div>
+  <div class="home-meta-row">
+    <p class="home-meta-label">{{ featured_post.date | default: site.time | date: "%A, %-d de %B de %Y" | upcase }}</p>
+    <p class="home-meta-label">{{ site.data.home.edition_label | upcase }}</p>
+  </div>
   <section class="home-masthead">
     <h1 class="home-title">{{ site.title }}</h1>
     <p class="home-subtitle">{{ site.description | strip }}</p>
@@ -14,4 +19,60 @@ permalink: /
       </nav>
     </div>
   </section>
+
+  {% if featured_post %}
+  <section class="home-editorial">
+    <div class="home-editorial-main">
+      <p class="section-kicker">{{ site.data.home.editorial_label | upcase }}</p>
+      <h2 class="home-featured-title">
+        <a href="{{ featured_post.url | prepend: site.baseurl }}">{{ featured_post.title }}</a>
+      </h2>
+      <p class="home-featured-summary">{{ featured_post.excerpt | strip_html | strip_newlines | truncate: 240 }}</p>
+      <a class="home-featured-cta" href="{{ featured_post.url | prepend: site.baseurl }}">Leia o post completo »</a>
+
+      {% if secondary_posts and secondary_posts.size > 0 %}
+      <div class="home-secondary-posts">
+        {% for post in secondary_posts %}
+        <article class="home-secondary-post">
+          <h3>
+            <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          </h3>
+          <p>{{ post.excerpt | strip_html | strip_newlines | truncate: 160 }}</p>
+        </article>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+
+    <aside class="home-sidebar">
+      {% if site.data.home.editor_note %}
+      <section class="home-note-panel">
+        <h2>{{ site.data.home.editor_note.title | upcase }}</h2>
+        {% for paragraph in site.data.home.editor_note.body %}
+        <p>{{ paragraph }}</p>
+        {% endfor %}
+      </section>
+      {% endif %}
+
+      {% if site.data.home.references and site.data.home.references.items %}
+      <section class="home-links-panel">
+        <h2>{{ site.data.home.references.title | upcase }}</h2>
+        <div class="home-links-list">
+          {% for item in site.data.home.references.items %}
+          <article class="home-link-item">
+            <h3>
+              <a href="{{ item.url }}">{{ item.title }}</a>
+            </h3>
+            <p>{{ item.description }}</p>
+          </article>
+          {% endfor %}
+        </div>
+        {% if site.data.home.references.cta_label != blank and site.data.home.references.cta_url != blank %}
+        <a class="home-links-cta" href="{{ site.data.home.references.cta_url | prepend: site.baseurl }}">{{ site.data.home.references.cta_label }}</a>
+        {% endif %}
+      </section>
+      {% endif %}
+    </aside>
+  </section>
+  {% endif %}
 </div>
