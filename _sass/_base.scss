@@ -31,6 +31,11 @@ body {
     flex-direction: column;
 }
 
+.home-page {
+    color: #111111;
+    background: #fbfbf8;
+}
+
 
 
 /**
@@ -120,6 +125,13 @@ dt {
     color: #dddddc;
 }
 
+.home-page p,
+.home-page li,
+.home-page dd,
+.home-page dt {
+    color: #111111;
+}
+
 strong,
 b {
     color: $grey-color-dark;
@@ -144,6 +156,11 @@ a {
         color: #ffffff;
         text-decoration: none;
     }
+}
+
+.home-page a,
+.home-page a:visited {
+    color: #111111;
 }
 
 
