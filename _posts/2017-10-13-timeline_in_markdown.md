@@ -7,7 +7,7 @@ categories: markdown
 
 I've adapted the [CodeMyUI's pure CSS timeline](https://gist.github.com/CodeMyUI/d5a6a6d98251de21b934c7c577cce147) for creating timelines in Jekyll-based blog posts (kramdown, essentially). The new CSS allows the user to create the timeline by defining a markdown table.
 
-To create timelines (assuming the user uses the default configurations for SASS in jekyll), the user must copy the [timeline SCSS file](https://github.com/cawal/cawal.github.io/blob/master/_sass/_timeline.scss) to the `_sass`folder of his Jekyll blog. Then, the user must add this file in the `@import` declaration in the `css/main.scss` file, also adding the following variable declarations to the `css/main.scss` file PRIOR to the `@import` declaration.
+To create timelines (assuming the user uses the default configurations for SASS in jekyll), the user must copy the [timeline SCSS file](https://github.com/cawal/cawal.github.io/blob/main/_sass/_timeline.scss) to the `_sass`folder of his Jekyll blog. Then, the user must add this file in the `@import` declaration in the `css/main.scss` file, also adding the following variable declarations to the `css/main.scss` file PRIOR to the `@import` declaration.
 
 ```sass
 $timeline-background-color: $background-color;
